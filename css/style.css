@@ -274,7 +274,7 @@ a{
 @media screen and (min-width:1024px){
   /* common */
   body{
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
   .headingOne{
     font-size: 6rem;
@@ -283,7 +283,7 @@ a{
     font-size: 4rem;
   }
   .headingThree{
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .button{
   width: 300px;
