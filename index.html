@@ -8,17 +8,35 @@
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/jquery.bgswitcher.js"></script>
 </head>
 <body>
-<header class="header">
+<header class="header" id="header">
   <div class="menuIcon">
-    <img class="iconImg" src="image/menu-icon.png" alt="menu">
-  </div>
+    <div id="nav-drawer">
+      <input id="nav-input" type="checkbox" class="nav-unshown">
+      <label id="nav-open" for="nav-input">
+        <span></span>
+      </label>
+      <label id="nav-close" for="nav-input" class="nav-unshown"></label>
+      <div id="nav-content">
+        <nav>
+          <ul>
+            <li><a href="#aboutMe">about me</a></li>
+            <li><a href="#works">works</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+        </nav>
+      </div><!--nav-content-->
+    </div><!--nav-drawer-->
+  </div><!--menuIcon-->
     <p class="subTitle">portfolio of my works</p>
   <h1 class="headingOne">TOSHIHITO YOSHIOKA</h1>
     <a class="button" href="#contact">contact</a> 
 </header>
-<section class="aboutMe">
+<section class="aboutMe" id="aboutMe">
   <h2 class="headingTwo">about me</h2>
   <div class="aboutMeImg">about me image</div>
     <ul class="aboutMeDescription">
@@ -30,7 +48,7 @@
       <li class="aboutMeText">趣味：釣り、音楽</li>
     </ul>
 </section>
-<section class="works">
+<section class="works" id="works">
   <h2 class="headingTwo">works</h2>
   <div id="slider">
 
@@ -119,7 +137,7 @@
   </div><!--#slider-->
     <a class="button">read more</a> 
 </section>
-<section class="skills">
+<section class="skills" id="skills">
   <h2 class="headingTwo">skills</h2>
   <div class="pcLayoutParent clearFix">
   <div class="pcLayout">
@@ -162,10 +180,7 @@
 <footer class="footer">
   &#169; Toshihito Yoshioka
 </footer>
-<script
-src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-crossorigin="anonymous"></script>
-<script src="/js/myScript.js"></script>
+
+<script src="js/myScript.js"></script>
 </body>
 </html>
