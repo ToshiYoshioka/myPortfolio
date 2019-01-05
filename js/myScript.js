@@ -1,11 +1,4 @@
 $(document).ready(function(){
-  //$(".aboutMeImg").bgswitcher({
-  // images: ["image/about_me01.png", "image/about_me02.png", "image/about_me03.png"],
-  //Interval: 3000, //切り替えの間隔 1000=1秒
-  //loop: true, //切り替えをループする
-  //effect: "fade", //エフェクトの種類 "fade" "blind" "clip" "slide" "drop" "hide"
-  //duration: 1000, //エフェクトの時間 1000=1秒
-  //});
   $('a[href^="#"]').click(function() {
     var speed = 1000;
     var href = $(this).attr("href");
@@ -15,5 +8,21 @@ $(document).ready(function(){
       scrollTop:position
       }, speed, 'swing');
     return false;
+  });
+  $(".aboutMeImg").hide().fadeIn(1000);
+  setInterval(function(){
+    var $active_image = $(".aboutMeImg li.active");
+    var $next_image = $active_image.next().length > 0 ? $active_image.next() : $(".aboutMeImg li:first") ;
+    $next_image.addClass("next").css({opacity:0})
+      .animate({opacity:1}, 2000, function(){
+        $active_image.removeClass("active");
+        $next_image.removeClass("next").addClass("active");
+      })
+  },3000);
+  $("#bx-slider").bxSlider({
+    nextSelector:"a#next-btn",
+    prevSelector:"a#prev-btn",
+    nextText:'',
+    prevText:''
   });
 });

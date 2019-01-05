@@ -53,6 +53,37 @@ a{
   box-shadow: none;
 }
 
+/* bxSlider */
+.bx-wrapper {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: none;
+}
+.bx-wrapper .bx-prev {
+  display: block;
+  width: 25px;
+  height: 37.5px;
+  left: 0;
+  background: none;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus {
+  cursor: pointer;
+}
+.bx-wrapper .bx-next {
+  display: block;
+  width: 25px;
+  height: 37.5px;
+  right: 0;
+  background: none;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+  cursor: pointer;
+}
+
 /* header */
 .header{
   padding: 120px 17.5px 50px;
@@ -184,12 +215,24 @@ a{
   width: 250px;
   height: 250px;
   margin: 60px auto 30px;
-  text-indent: -9999px;
+  position: relative;
+}
+.aboutMeImg img{
+  width: 100%;
   border-radius: 50%;
-  background-image: 
-    url(../image/about_me01.png), url(../image/about_me02.png), url(../image/about_me03.png);
-  background-position: top center, center center, center center;
-  background-size: cover, cover, cover;
+  z-index: auto;
+}
+.aboutMeImg li{
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+}
+.aboutMeImg li.active{
+  z-index: 10;
+}
+.aboutMeImg li.next{
+  z-index: 11;
 }
 .aboutMeDescription{
   padding: 0;
@@ -218,7 +261,7 @@ a{
   background:
     linear-gradient(to top left, rgba(177,177,177,0) 50%, #b1b1b1 50.5%) no-repeat top left/100% 100%;
 }
-.container{
+.worksContainer{
  position: relative;
 }
 .worksImg{
@@ -226,17 +269,23 @@ a{
   width: 80%;
   margin: 0 auto;
 }
-.leftMark,.rightMark{
+.leftMark, 
+.rightMark{
   display: block;
   position: absolute;
   width: 25px;
+  height: 37.5px;
   top: 45%;
 }
 .leftMark{
   left: 0;
+  background: url(../image/left.png);
+  background-size: cover;
 }
 .rightMark{
   right: 0;
+  background: url(../image/right.png);
+  background-size: cover;
 }
 .paragraph{
   letter-spacing: 0.5rem;
@@ -393,7 +442,7 @@ a{
   }
 
   /* works */
-  .container{
+  .worksContainer{
     width: 80%;
     margin: 0 auto;
   }
