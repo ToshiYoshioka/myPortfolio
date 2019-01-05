@@ -84,16 +84,7 @@ a{
   cursor: pointer;
 }
 
-/* header */
-.header{
-  padding: 120px 17.5px 50px;
-  position: relative;
-}
-.menuIcon{
-  position: absolute;
-  top: 17.5px;
-  left: 17.5px;
-}
+/* humburger menu*/
 #nav-drawer {
   position: relative;
 }
@@ -174,6 +165,18 @@ a{
   line-height: 3rem;
   letter-spacing: 0.25rem;
 }
+
+/* header */
+.header{
+  padding: 120px 17.5px 50px;
+  position: relative;
+}
+.menuIcon{
+  position: absolute;
+  top: 17.5px;
+  left: 17.5px;
+}
+
 .subTitle{
   letter-spacing: 0.5rem;  
 }
