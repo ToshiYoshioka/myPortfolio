@@ -266,10 +266,11 @@ a{
 }
 .worksContainer{
  position: relative;
+ max-width: 1024px;
 }
 .worksImg{
   display: block;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 .leftMark, 
@@ -304,6 +305,7 @@ a{
 }
 .worksText::before{
   content: '・';
+  display: inline-block;
   width: 1.6rem;
 }
 
@@ -424,18 +426,14 @@ a{
     letter-spacing: 1rem;
   }
   .pcLayoutParent{
-    width: 80%;
+    width: 90%;
+    max-width:1024px; 
     margin: 0 auto;
   }
   .clearFix::after{
     content: '';
     display: block;
     clear: both;
-  }
-  .pcLayout{
-    float: left;
-    width: 33%;
-    padding: 10px;
   }
 
   /* header */
@@ -448,5 +446,35 @@ a{
   .worksContainer{
     width: 80%;
     margin: 0 auto;
+  }
+  .worksText::before{
+    width: 1.8rem;
+  }
+  .worksText{
+    text-align: left;
+  }
+  .worksLayout{
+    float: left;
+    width: 35%;
+    padding: 10px;
+  }
+  .worksLayout:first-child{
+    width: 40%;
+    max-width: 
+  }
+  .worksLayout:last-child{
+    width: 25%;
+  }
+  .paragraph{
+    width: 90%;
+  }
+  /* skills */
+  .skillsLayout{
+    float: left;
+    width: 33%;
+    padding: 10px;
+  }
+  .skillsText{
+    width: 100%;
   }
 }
