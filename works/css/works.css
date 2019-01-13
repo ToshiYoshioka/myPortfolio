@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* header */
+.header{
+  padding: 62px 17.5px 0;
+}
+/* worksDetail*/
+.worksDetail{
+  padding: 60px 17.5px 30px;
+  position: relative;
+  background: #b1b1b1;
+}
+.worksDetail::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background:
+    linear-gradient(to top left, rgba(30,31,33,0) 50%, #1e1f21 50.5%) no-repeat top left/100% 100%;
+}
