@@ -94,8 +94,8 @@ a{
 /*アイコンのスペース*/
 #nav-open {
   display: inline-block;
-  width: 62px;
-  height: 50px;
+  width: 52px;
+  height: 40px;
   cursor: pointer;
 }
 /*ハンバーガーアイコン表現*/
@@ -103,18 +103,18 @@ a{
 #nav-open span:before, 
 #nav-open span:after{
   position: absolute;
-  height: 10px;/*線の太さ*/
-  width: 62px;/*長さ*/
+  height: 8px;/*線の太さ*/
+  width: 52px;/*長さ*/
   border-radius: 5px;
   background: #fff;
   display: block;
   content: '';
 }
 #nav-open span:before {
-  bottom: -20px;
+  bottom: -18px;
 }
 #nav-open span:after {
-  bottom: -40px;
+  bottom: -36px;
 }
 /*閉じる用半透明黒カバーを全画面に表示する*/
 #nav-close {
@@ -406,6 +406,25 @@ a{
   /* common */
   body{
     font-size: 1.8rem;
+  }
+  /* humberger menu icon */
+  /*ハンバーガーアイコン表現*/
+  #nav-open span, 
+  #nav-open span:before, 
+  #nav-open span:after{
+    position: absolute;
+    height: 10px;/*線の太さ*/
+    width: 62px;/*長さ*/
+    border-radius: 5px;
+    background: #fff;
+    display: block;
+    content: '';
+  }
+  #nav-open span:before {
+    bottom: -20px;
+  }
+  #nav-open span:after {
+    bottom: -40px;
   }
   .headingOne{
     font-size: 6rem;
