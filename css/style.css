@@ -111,10 +111,10 @@ a{
   content: '';
 }
 #nav-open span:before {
-  bottom: -18px;
+  bottom: -16px;
 }
 #nav-open span:after {
-  bottom: -36px;
+  bottom: -32px;
 }
 /*閉じる用半透明黒カバーを全画面に表示する*/
 #nav-close {
