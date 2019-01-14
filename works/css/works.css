@@ -1,9 +1,20 @@
 @charset "utf-8";
-/* header */
+/* works history common */
+.bold{
+  font-weight: bold;
+}
+/* works detail bx-slider
+.bx-wrapper .bx-prev {
+  left: 0;
+}
+.bx-wrapper .bx-next {
+  right: 0;
+}*/
+/* works history header */
 .header{
   padding: 62px 17.5px 0;
 }
-/* worksDetail*/
+/* works history worksDetail*/
 .worksDetail{
   padding: 60px 17.5px 30px;
   position: relative;
@@ -19,4 +30,16 @@
   padding: 30px;
   background:
     linear-gradient(to top left, rgba(30,31,33,0) 50%, #1e1f21 50.5%) no-repeat top left/100% 100%;
+}
+.worksText::before{
+  display: none;
+}
+.historyContainer{
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width:1024px){
+  
 }
