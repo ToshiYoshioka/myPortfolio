@@ -61,6 +61,12 @@
 
 @media screen and (min-width:1024px){
   /* worksHistory */
+  #next-btn{
+    right: 3%;
+  }
+  #prev-btn{
+    left: 3%;
+  }
   .worksText{
     text-align: center;
   }
