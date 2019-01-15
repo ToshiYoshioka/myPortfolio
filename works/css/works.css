@@ -3,13 +3,6 @@
 .bold{
   font-weight: bold;
 }
-/* works detail bx-slider
-.bx-wrapper .bx-prev {
-  left: 0;
-}
-.bx-wrapper .bx-next {
-  right: 0;
-}*/
 /* works history header */
 .header{
   padding: 62px 17.5px 0;
@@ -34,12 +27,71 @@
 .worksText::before{
   display: none;
 }
+.comment{
+  width: 80%;
+  margin: 0 auto;
+  letter-spacing: 0.1rem;
+  line-height: 1.8;
+}
+/* works bx-slider */
 .historyContainer{
   width: 100%;
-  max-width: 740px;
+  margin: 0 auto;
+  position: relative;
+}
+#next-btn,
+#prev-btn{
+  position: absolute;
+  top: 40%;
+}
+#next-btn{
+  right: 0;
+}
+#prev-btn{
+  left: 0;
+}
+.worksHistoryInner{
+  width: 100%;
+}
+.worksHistoryInner img{
+  width: 80%;
+  max-width: 760px;
   margin: 0 auto;
 }
 
 @media screen and (min-width:1024px){
-  
+  /* worksHistory */
+  .worksText{
+    text-align: center;
+  }
+  .paragraph{
+    width: 100%;
+  }
+  .historyLayoutParent{
+    width: 100%;
+    max-width:1024px; 
+    margin: 0 auto;
+  }
+  .clearFix::after{
+    content: '';
+    display: block;
+    clear: both;
+  }
+  .historyLayout1{
+    float: left;
+    width: 50%;
+  }
+  .historyLayout2{
+    float: left;
+    width: 33%;
+    padding: 10px;
+  }
+  .historyLayout2:first-child{
+    float: left;
+    width: 30%;
+  }
+  .historyLayout2:last-child{
+    float: left;
+    width: 37%;
+  }
 }
