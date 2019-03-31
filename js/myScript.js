@@ -1,4 +1,10 @@
-$(document).ready(function(){
+jQuery(document).ready(function($){
+  $("#bx-slider").bxSlider({
+    nextSelector:'a#next-btn',
+    prevSelector:'a#prev-btn',
+    nextText:'',
+    prevText:''
+  });
   $('a[href^="#"]').click(function() {
     var href = $(this).attr("href");
     var target = $(href == "#" || href == "" ? 'html' : href);
@@ -18,10 +24,4 @@ $(document).ready(function(){
         $next_image.removeClass("next").addClass("active");
       })
   },3000);
-  $("#bx-slider").bxSlider({
-    nextSelector:"a#next-btn",
-    prevSelector:"a#prev-btn",
-    nextText:'',
-    prevText:''
-  });
 });
