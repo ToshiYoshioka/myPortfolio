@@ -1,0 +1,57 @@
+[
+  {
+    "title":"IIJmio webサイト運用",
+    "productSlide":[ "image/history-iij01.png", "image/history-iij02.png", "image/history-iij03.png" ],
+    "assigned":"・Webデザイナーの制作物のソースレビュー、テスト業務<br>・GitlabとSourcetreeを用いたリソースのバージョン管理とリリース業務<br>・webページの定常更新業務<br>（リリーススケジュール作成、HTML・CSSのマークアップ、テスト、リリースまで）<br>・制作スケジュール。リリースタイムテーブルの作成<br>・カスタマーサポートセンターとの連携業務<br>（販促キャンペーンの仕様共有やサポート方針の指示など）<br>・メールマガジン配信業務<br>（配信対象者リストの作成、文面の査読作業、配信作業など）<br>・販促キャンペーン特典送付業務<br>・各業務フローの作業マニュアル構築<br>",
+    "teams":"ディレクター：2名<br>デザイナー：2名<br>コーダー：2名<br>フロントエンドエンジニア：3名",
+    "period":"2018年2月 ～ 2019年3月",
+    "language":"HTML5<br>CSS3",
+    "designTools":"Gitlab<br>SourceTree<br>EmEditor<br>Brackets<br>WinSCP<br>WinMerge",
+    "convTools":"Redmine<br>Office365 teams<br>Confulence<br>Word<br>Excel<br>PowerPoint<br>PDF",
+    "comment":"某MVNO事業者の会員サイトの運営業務を、コーダーおよびwebディレクターアシスタントとして担当。<br>毎月行われる販促キャンペーンの開催や、新規取り扱い端末の発売開始に伴う制作物のソースレビューやテスト、リリース作業を主に担当する。また、定常的に発生する簡単な制作業務のスケジューリングや、システム開発担当部署との合同リリース時の作業タイムテーブルの作成も経験した。<br>新規販促キャンペーンの開催時には、カスタマーサポートセンターと連携し、販促キャンペーンのシステム仕様の共有や、案内方針の指示などにも対応した。"
+  },
+  {
+    "title":"Yahoo!ショッピングWebサイト運用",
+    "productSlide":[ "image/history-ys01.png", "image/history-ys02.png", "image/history-ys03.png" ],
+    "assigned":"・販促キャンペーンページの更新作業<br>・Movable Typeを用いたページ構築<br>・HTML5、CSS3のマークアップ<br>・バナー画像の作成<br>・HTMLメールマガジンのマークアップ<br>    ・各業務フローの作業マニュアル構築",
+    "teams":"・ディレクター：2名<br>・デザイナー兼コーダー：3名<br>・事務オペレータ：3名<br>",
+    "period":"2017年8月 ～ 2017年12月",
+    "language":"HTML5<br>CSS3",
+    "designTools":"Photoshop<br>Illustrator<br>Dreamweaver<br>Brackets<br>Movable Type",
+    "convTools":"JIRA<br>Office365<br>Confulence<br>Word<br>Excel<br>PowerPoint",
+    "comment":"Yahoo! ショッピングの販促企画ページ「ポイントキャンペーントップページ」の更新業務を担当。<br>基本的にサイトの新規構築ではなく、前回開催分ページをもとにして画像や文言を更新していく作業が中心となった。日々多くの更新依頼があり、納期が重なることも多かったため、チームメンバーと密に連携し、正確で速い作業を心掛けた。Yahoo! ショッピングの販促企画ページ「ポイントキャンペーントップページ」の更新業務のひとつであるアフィリエイトバナーの更新において、左記の画像を制作。<br>ひとつひとつの画像に対して厳格な制作レギュレーションがあり、制作物はデザイン部のクオリティチェックを受けるため、レギュレーションをきちんと理解し、手戻りのないように意識して制作に臨んだ。<br>ひとつのプロジェクトにつき、制作するバナーの枚数は20～40枚ほどで、もととなるクリエイティブのPSDを使ってリサイズをしていく。初稿の作成時間は2時間から4時間ほど。"
+  },
+  {
+    "title":"クリーン用品卸売業社コンシューマー向けECサイト運用",
+    "productSlide":[ "image/history-kopa01.png", "image/history-kopa02.png", "image/history-kopa03.png" ],
+    "assigned":"・webページ更新（楽天市場）<br>・商品画像の撮影および画像加工<br>・商品のキャッチコピーおよび商品説明文の作成<br>・受注発送業務<br>・新規商品登録<br>・登録商品の在庫管理<br>・経理消込業務",
+    "teams":"・店長：1名",
+    "period":"2017年4月 ～ 2017年7月",
+    "language":"HTML5<br>CSS3",
+    "designTools":"Photoshop<br>Illustrator<br>Brackets<br>楽天市場独自CMS",
+    "convTools":"Microsoft Office<br>Word<br>Excel<br>PowerPoint<br>PDF",
+    "comment":"キッチン用品、クリーン用品の卸、小売業者在籍時は、営業部ネット課楽天市場店店長として、ECサイト運営業務に広く従事。<br>制作業務においては、商品写真の撮影と加工、キャッチコピーや商品説明文などのコピーライティング、商品スペックをtabelタグを用いて表としてコーディングする作業などを経験した。"
+  },
+  {
+    "title":"アパレルショップコンシューマー向けECサイト運用",
+    "productSlide":[ "image/history-mex01.png","image/history-mex02.png"],
+    "assigned":"",
+    "teams":"・ディレクター：2名<br>・コーダー：2名<br>・デザイナー：2名<br>・オペレータ1名",
+    "period":"2015年9月 ～ 2017年3月",
+    "language":"HTML5<br>CSS3",
+    "designTools":"Photoshop<br>Illustrator<br>Dreamweaver<br>Futureshop（独自ドメイン用CMS）<br>楽天市場独自CMS",
+    "convTools":"ChatWork<br>Microsoft Office<br>Word<br>Excel<br>PowerPoint",
+    "comment":"某アパレル小売業本社EC事業部にて、ECサイト運営部制作メンバーとして勤務。<br>商品写真の加工やコピーライティング、紙媒体シーズンカタログの作成や、商品ページ、店舗トップページ、特集ページの構築(html5 やCSS3を用いた簡単なコーディング)を担当した。また、制作業務以外にも受注発送業務、ZOZOTOWNなどの販売委託サイトへの納品等の物流業務、商品ページで使用するイメージ画像の撮影やロケハンなども経験した。"
+  },
+  {
+    "title":"個人製作",
+    "productSlide":["image/history-seisaku01.png","image/history-seisaku02.png","image/history-seisaku03.png","image/history-seisaku03.png" ],
+    "assigned":"・UIデザイン<br>・画像作成<br>・マークアップ",
+    "teams":"DIY",
+    "period":"",
+    "language":"HTML5<br>CSS3<br>J Query",
+    "designTools":"Photoshop<br>Illustrator<br>Dreamweaver<br>FFFTP",
+    "convTools":"GitHub",
+    "comment":"ページデザインからマークアップ、デプロイまでをゼロベースで行った個人製作。架空のフラワーショップから、店舗トップページのリニューアルの依頼を受けた想定で制作。レスポンシブ対応でマークアップしており、アコーディオンメニュー、ページスクローラー、ハンバーガーメニューはJQueryで実装。ファーストビューはどのデバイスで見てもフルスクリーンのスライドショーになっている。各デバイス用のデザインラフの制作に約36時間、マークアップに約24時間を要した。リソースのデプロイにはGitHubPagesを利用。"
+  }
+]
