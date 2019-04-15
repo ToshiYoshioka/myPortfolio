@@ -1,0 +1,13 @@
+[
+  {
+    "title":"IIJmio webサイト運用",
+    "productSlide":[ "image/history-iij01.png", "image/history-iij02.png", "image/history-iij03.png" ],
+    "assigned":"・Webデザイナーの制作物のソースレビュー、テスト業務<br>・GitlabとSourcetreeを用いたリソースのバージョン管理とリリース業務<br>・webページの定常更新業務<br>（リリーススケジュール作成、HTML・CSSのマークアップ、テスト、リリースまで）<br>・制作スケジュール。リリースタイムテーブルの作成<br>・カスタマーサポートセンターとの連携業務<br>（販促キャンペーンの仕様共有やサポート方針の指示など）<br>・メールマガジン配信業務<br>（配信対象者リストの作成、文面の査読作業、配信作業など）<br>・販促キャンペーン特典送付業務<br>・各業務フローの作業マニュアル構築<br>",
+    "teams":"ディレクター：2名<br>デザイナー：2名<br>コーダー：2名<br>フロントエンドエンジニア：3名",
+    "period":"2018年2月 ～ 2019年3月",
+    "language":"HTML5<br>CSS3",
+    "designTools":"Gitlab<br>SourceTree<br>EmEditor<br>Brackets<br>WinSCP<br>WinMerge",
+    "convTools":"Redmine<br>Office365 teams<br>Confulence<br>Word<br>Excel<br>PowerPoint<br>PDF",
+    "comment":"某MVNO事業者の会員サイトの運営業務を、コーダーおよびwebディレクターアシスタントとして担当。<br>毎月行われる販促キャンペーンの開催や、新規取り扱い端末の発売開始に伴う制作物のソースレビューやテスト、リリース作業を主に担当する。また、定常的に発生する簡単な制作業務のスケジューリングや、システム開発担当部署との合同リリース時の作業タイムテーブルの作成も経験した。<br>新規販促キャンペーンの開催時には、カスタマーサポートセンターと連携し、販促キャンペーンのシステム仕様の共有や、案内方針の指示などにも対応した。"
+  }
+]
