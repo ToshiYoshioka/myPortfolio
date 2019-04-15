@@ -4,15 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta name="description" content="Webディレクター吉岡稔仁のポートフォリオサイト">
-  <title>works history | TOSHIHITO YOSHIOKA</title>
+  <title>works detail | TOSHIHITO YOSHIOKA</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
-  <link rel="stylesheet" href="/myPortfolio/css/jquery.bxslider.css">
-  <link rel="stylesheet" href="/myPortfolio/css/normalize.css">
-  <link rel="stylesheet" href="/myPortfolio/css/style.css">
+  <link rel="stylesheet" href="../css/jquery.bxslider.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="css/works.css">
-  <link rel="icon" href="/myPortfolio/image/favicon.ico">
+  <link rel="icon" href="../image/favicon.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/myPortfolio/js/jquery.bxslider.js"></script>
+  <script src="../js/jquery.bxslider.js"></script>
 </head>
 <body>
 <header class="header" id="header">
@@ -26,12 +26,12 @@
       <div id="nav-content">
         <nav>
           <ul>
-            <li><a href="/myPortfolio/index.php" target="_blank">TOP PAGE</a></li>
-            <li><a class="anken" href='iij' data-contents="0">IIJmio webサイト運用</a></li>
-            <li><a class="anken" href='yahoo' data-contents="1">Yahoo!ショッピングWebサイト運用</a></li>
-            <li><a class="anken" href='clean' data-contents="2">クリーン用品ECサイト運用</a></li>
-            <li><a class="anken" href='aparel' data-contents="3">アパレルECサイト運用</a></li>
-            <li><a class="anken" href='original' data-contents="4">個人製作</a></li>
+            <li><a href="../content.html" target="_blank">TOP PAGE</a></li>
+            <li><a href="#">IIJmio webサイト運用</a></li>
+            <li><a href="#">Yahoo!ショッピングWebサイト運用</a></li>
+            <li><a href="#">クリーン用品ECサイト運用</a></li>
+            <li><a href="#">アパレルECサイト運用</a></li>
+            <li><a href="#">個人製作</a></li>
             <li><a href="#contact">contact</a></li>
           </ul>
         </nav>
@@ -41,78 +41,97 @@
   <h1 class="headingOne">works history</h1>
 </header>
 <section class="worksDetail">
-  <h2 class="headingTwo" id="title">案件名</h2>
+  <h2 class="headingTwo">案件名</h2>
     <div class="historyContainer">
-      <div class="worksHistory" id="sliderImage">
-        <!--ここのimgはJqueryで取得する-->
+      <div class="worksHistory">
+        <div class="worksHistoryInner">
+          <img src="image/history-seisaku01.png" alt="IIJ mio Webサイト運用イメージ">
+          <a id="next-btn" class="rightMark"></a>
+          <a id="prev-btn" class="leftMark"></a>
+        </div><!--worksHistoryInner-->
+        <div class="worksHistoryInner">
+          <img src="image/history-seisaku02.png" alt="Yahoo!ショッピングWebサイト運用イメージ">
+          <a id="next-btn" class="rightMark"></a>
+          <a id="prev-btn" class="leftMark"></a>
+        </div><!--worksHistoryInner-->
+        <div class="worksHistoryInner">
+          <img src="image/history-seisaku03.png" alt="アパレルECサイト運用イメージ">
+          <a id="next-btn" class="rightMark"></a>
+          <a id="prev-btn" class="leftMark"></a>
+        </div><!--worksHistoryInner-->
       </div><!--worksHistory-->
     </div><!--historyContainer-->
-    <div><!--customControl-->
-      <a id="next-btn" class="rightMark"></a>
-      <a id="prev-btn" class="leftMark"></a>
-    </div><!--customControl-->
     <h3 class="headingThree">【担当業務概要】</h3>
-    <div class="worksDescription">
-      <p class="worksText" id="assigned">
-      <!--ここのimgはJqueryで取得する-->
-      </p>
-    </div><!--worksDescription-->
+    <ul class="worksDescription">
+      <li class="worksText">hogehoge</li>
+      <li class="worksText">fugafuga</li>
+      <li class="worksText">piyopiyo</li>
+      <li class="worksText">munyamunya</li>
+    </ul>
     <div class="historyLayoutParent clearFix">
       <div class="historyLayout1">
       <h3 class="headingThree">【ポジション・チーム】</h3>
-      <div class="worksDescription">
-        <p class="worksText" id="teams">
-        <!--ここのimgはJqueryで取得する-->
-        </p>
-      </div><!--worksDescription-->
+      <ul class="worksDescription">
+        <li class="worksText">ディレクター：0名</li>
+        <li class="worksText">デザイナー：0名</li>
+        <li class="worksText">コーダー：0名</li>
+        <li class="worksText">フロントエンドエンジニア：0名</li>
+        <li class="worksText">その他オペレータ：0名</li>
+      </ul>
       </div><!--historyLayout1-->
       <div class="historyLayout1">
       <h3 class="headingThree">【対応期間】</h3>
-      <div class="worksDescription">
-        <p class="worksText" id="period">
-        <!--ここのimgはJqueryで取得する-->
-        </p>
-      </div><!--worksDescription-->
+      <ul class="worksDescription">
+        <li class="worksText">0000年0月 ～ 0000年00月</li>
+      </ul>
       </div><!--historyLayout1-->
     </div><!--historyLayoutParent-->
       <h3 class="headingThree">【言語・ツール】</h3>
     <div class="historyLayoutParent clearFix">
       <div class="historyLayout2">
+      <ul class="worksDescription">
         <p class="paragraph bold">～対応言語～</p>
-        <div class="worksDescription">
-        <p class="worksText" id="language">
-        <!--ここのimgはJqueryで取得する-->
-        </p>
-        </div>
+        <li class="worksText">HTML5</li>
+        <li class="worksText">CSS3</li>
+        <li class="worksText">JavaScript（JQuery）</li>
+      </ul>
       </div><!--historyLayout2-->
       <div class="historyLayout2">
+      <ul class="worksDescription">
         <p class="paragraph bold">～制作ツール～</p>
-        <div class="worksDescription">
-          <p class="worksText" id="designTools">
-          <!--ここのimgはJqueryで取得する-->
-          </p>
-        </div>
+        <li class="worksText">Photoshop</li>
+        <li class="worksText">Illustrator</li>
+        <li class="worksText">Dreamwever</li>
+        <li class="worksText">Brackets<br>（テキストエディタ）</li>
+        <li class="worksText">Sourcetree<br>（Git GUIツール）</li>
+        <li class="worksText">Github<br>（Gitホスティングサービス）</li>
+        <li class="worksText">Gitlab<br>（Gitホスティングサービス）</li>
+        <li class="worksText">WinMerge<br>（diffチェッカー）</li>
+      </ul>
       </div><!--historyLayout2-->
       <div class="historyLayout2">
+      <ul class="worksDescription">
         <p class="paragraph bold">～コミュニケーションツール～</p>
-        <div class="worksDescription">
-          <p class="worksText" id="convTools">
-          <!--ここのimgはJqueryで取得する-->
-          </p>
-        </div>
+        <li class="worksText">JIRA<br>（プロジェクト管理ツール）</li>
+        <li class="worksText">Confluence<br>（社内wikiツール）</li>
+        <li class="worksText">Redmine<br>（プロジェクト管理ツール）</li>
+        <li class="worksText">Pukiwiki<br>（社内wikiツール）</li>
+        <li class="worksText">Office365 teams<br>（プロジェクト管理ツール）</li>
+        <li class="worksText">Chatwork<br>（チャット・タスク管理ツール）</li>
+      </ul>
       </div><!--historyLayout2-->
     </div><!--historyLayoutParent-->
     <h3 class="headingThree">【コメント】</h3>
-    <p class="comment" id="comment">
-    <!--ここのimgはJqueryで取得する-->
+    <p class="comment">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </section>
 <section class="contact" id="contact">
   <h2 class="headingTwo">contact</h2>
-    <form class="contactForm"  method="post" action="myPortfolio/check.php">
-      <input type="text" name="name" value="<?php print $name; ?>" placeholder="name">
-      <input type="text" name="email" value="<?php print $email; ?>" placeholder="email">
-      <textarea name="message" placeholder="message"><?php print $message; ?></textarea>
+    <form class="contactForm">
+      <input type="text" name="name" placeholder="name">
+      <input type="text" name="email" placeholder="email">
+      <textarea name="message" placeholder="message"></textarea>
       <input type="submit" value="SEND" class="button">
     </form>
 </section>
