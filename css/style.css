@@ -61,27 +61,30 @@ a{
   border: none;
   background: none;
 }
-.bx-wrapper .bx-prev {
+.bx-prev {
   display: block;
   width: 25px;
   height: 37.5px;
   left: 0;
   background: none;
 }
-.bx-wrapper .bx-prev:hover,
-.bx-wrapper .bx-prev:focus {
+.bx-prev:hover,
+.bx-prev:focus {
   cursor: pointer;
 }
-.bx-wrapper .bx-next {
+.bx-next {
   display: block;
   width: 25px;
   height: 37.5px;
   right: 0;
   background: none;
 }
-.bx-wrapper .bx-next:hover,
-.bx-wrapper .bx-next:focus {
+.bx-next:hover,
+.bx-next:focus {
   cursor: pointer;
+}
+.bx-wrapper img{
+max-width: 760px;
 }
 
 /* humburger menu*/
@@ -120,7 +123,7 @@ a{
 #nav-close {
   display: none;
   position: fixed;
-  z-index: 99;/*メニューよりうしろ、headerより前*/
+  z-index: 130;/*メニューよりうしろ、headerより前*/
   top: 0;
   left: 0;
   width: 100%;
@@ -169,12 +172,12 @@ a{
 /* header */
 .header{
   padding: 120px 17.5px 50px;
-  position: relative;
 }
 .menuIcon{
-  position: absolute;
+  position: fixed;
   top: 17.5px;
   left: 17.5px;
+  z-index: 10;
 }
 
 .subTitle{
@@ -235,7 +238,7 @@ a{
   z-index: 10;
 }
 .aboutMeImg li.next{
-  z-index: 11;
+  z-index: 20;
 }
 .aboutMeDescription{
   padding: 0;
@@ -271,6 +274,7 @@ a{
 .worksImg{
   display: block;
   width: 85%;
+  max-width: 760px;
   margin: 0 auto;
 }
 .leftMark, 
@@ -279,15 +283,15 @@ a{
   position: absolute;
   width: 25px;
   height: 37.5px;
-  top: 45%;
+  top: 25%;
 }
 .leftMark{
-  left: 0;
+  left: 3%;
   background: url(../image/left.png);
   background-size: cover;
 }
 .rightMark{
-  right: 0;
+  right: 3%;
   background: url(../image/right.png);
   background-size: cover;
 }

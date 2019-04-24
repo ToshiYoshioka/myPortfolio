@@ -1,3 +1,32 @@
+<?php
+//セッション変数を使います宣言
+session_start();
+session_regenerate_id(true);
+
+//もしセッション変数に定義がある場合は、入力された値を使用する
+if(isset($_SESSION['name'])== true){
+  $name = $_SESSION['name'];
+}else{
+  $name = '';
+}
+
+if(isset($_SESSION['email'])== true){
+  $email = $_SESSION['email'];
+}else{
+  $email = '';
+}
+
+if(isset($_SESSION['message'])== true){
+  $message = $_SESSION['message'];
+}else{
+  $message = '';
+}
+
+//サニタイズする
+$name = htmlspecialchars($name);
+$email = htmlspecialchars($email);
+$message = htmlspecialchars($message);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,21 +34,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <meta name="description" content="Webディレクター吉岡稔仁のポートフォリオサイト">
   <title>PORTFOLIO | TOSHIHITO YOSHIOKA</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
-  <link rel="stylesheet" href="css/jquery.bxslider.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="image/favicon.ico">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/jquery.bxslider.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/jquery.bxslider.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="header" id="header">
-  <div class="menuIcon">
     <div id="nav-drawer">
       <input id="nav-input" type="checkbox" class="nav-unshown">
       <label id="nav-open" for="nav-input">
-        <span></span>
+      <div class="menuIcon"><span></span></div><!--menuIcon-->
       </label>
       <label id="nav-close" for="nav-input" class="nav-unshown"></label>
       <div id="nav-content">
@@ -33,7 +59,6 @@
         </nav>
       </div><!--nav-content-->
     </div><!--nav-drawer-->
-  </div><!--menuIcon-->
     <p class="subTitle">portfolio of my works</p>
   <h1 class="headingOne">TOSHIHITO YOSHIOKA</h1>
     <a class="button" href="#contact">contact</a> 
@@ -56,11 +81,9 @@
 </section>
 <section class="works" id="works">
   <h2 class="headingTwo">works</h2>
-  <div id="bx-slider">
-  <div class="sliderContainer">
+  <ul id="bx-slider">
+  <li class="sliderContainer">
     <div class="worksContainer">
-      <a id="prev-btn" class="leftMark"></a>
-      <a id="next-btn" class="rightMark"></a>
       <img class="worksImg" src="image/works01.png" alt="IIJ mio Webサイト運用イメージ">
     </div>
     <h3 class="headingThree">IIJmio Webサイト運用</h3>
@@ -100,11 +123,9 @@
       </ul>
     </div><!--worksLayout-->
     </div><!--pcLayoutParent-->
-  </div><!--sliderContainer-->
-  <div class="sliderContainer">
+  </li><!--sliderContainer-->
+  <li class="sliderContainer">
     <div class="worksContainer">
-      <a id="prev-btn" class="leftMark"></a>
-      <a id="next-btn" class="rightMark"></a>
       <img class="worksImg" src="image/works02.png" alt="Yahoo!ショッピング Webサイト運用イメージ">
     </div>
     <h3 class="headingThree">Yahoo!ショッピング<br>Webサイト運用</h3>
@@ -142,11 +163,9 @@
       </ul>
     </div><!--worksLayout-->
     </div><!--pcLayoutParent-->
-  </div><!--sliderContainer-->
-  <div class="sliderContainer">
+  </li><!--sliderContainer-->
+  <li class="sliderContainer">
     <div class="worksContainer">
-      <a id="prev-btn" class="leftMark"></a>
-      <a id="next-btn" class="rightMark"></a>
       <img class="worksImg" src="image/works03.png" alt="アパレルECサイト運用イメージ">
     </div>
     <h3 class="headingThree">アパレルECサイト運用</h3>
@@ -186,9 +205,13 @@
       </ul>
     </div><!--worksLayout-->
     </div><!--pcLayoutParent-->
-  </div><!--sliderContainer-->
-  </div><!--#bx-slider-->
-    <a class="button" href="works/works.html" target="_blank">read more</a> 
+  </li><!--sliderContainer-->
+  </ul><!--#bx-slider-->
+  <div><!--customControl-->
+    <a id="prev-btn" class="leftMark"></a>
+    <a id="next-btn" class="rightMark"></a>
+  </div><!--customControl-->
+  <a class="button" href="works" target="_blank">read more</a>
 </section>
 <section class="skills" id="skills">
   <h2 class="headingTwo">skills</h2>
@@ -224,16 +247,29 @@
 </section>
 <section class="contact" id="contact">
   <h2 class="headingTwo">contact</h2>
-    <form class="contactForm">
-      <input type="text" name="name" placeholder="name">
-      <input type="text" name="email" placeholder="email">
-      <textarea name="message" placeholder="message"></textarea>
+    <form class="contactForm" method="post" action="check.php">
+      <input type="text" name="name" value="<?php print $name; ?>" placeholder="name">
+      <input type="text" name="email"  value="<?php print $email; ?>" placeholder="email">
+      <textarea name="message" placeholder="message"><?php print $message; ?></textarea>
+      <?php
+      // エラーがあった場合は、エラー表示をする
+      if (isset($_SESSION['error']) == true) {
+       $error = $_SESSION['error'];
+      print '<p style="color: red;">';
+      foreach($error as $err) {
+      print $err.'<br />';
+      }
+      print '</p>';
+      }
+      ?>
       <input type="submit" value="SEND" class="button">
     </form>
 </section>
 <footer class="footer">
   &#169; Toshihito Yoshioka
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/jquery.bxslider.js"></script>
 <script src="js/myScript.js"></script>
 </body>
 </html>

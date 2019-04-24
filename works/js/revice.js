@@ -1,8 +1,7 @@
 $(document).ready(function(){
 
-  //デフォルトでコンテンツを表示させる。処理はこの後書く。
-  changeContents(0);
-  
+  changeContents(0); // デフォルトで表示するコンテンツ
+
   //ページ内リンクスクローラー
   $('a[href^="#"]').click(function(){ //href^="#" → href属性の値が#で始まるアンカーを踏んだら…の意味
     var href = $(this).attr('href');
@@ -13,8 +12,6 @@ $(document).ready(function(){
       }, 1000, 'swing');
     return false;
   });
-  
-  
   //ハンバーガーメニューの各項目のdata-contentsの番号を取得して、jsonデータのインデックス番号を指定する
   $('.anken').click(function(){
     var id = parseInt($(this).data('contents'));
@@ -31,36 +28,36 @@ $(document).ready(function(){
       dataType: 'json' //データファイルをjsonとして定義
     })
     .done(function(data){ //ajax通信に成功して、jsonのデータをもらったら
-        //案件名にtitleデータを流し込む（以下テキスト系は同じ処理）
-        $('#title').html(data[id].title); 
-        //bx-sliderプラグインが生成したDOMが既に存在しているので、根こそぎ消去する。
-        //消去の対象になるDOMは、画像を入れ子しているdivとページャー、三角の送りボタンの合計４つ
-        if ($('.bx-wrapper')) $('.bx-wrapper').remove(); 
-        if ($('.bx-next')) $('.bx-next').remove();
-        if ($('.bx-prev')) $('.bx-prev').remove();
-        if ($('.bx-pager')) $('.bx-pager').remove();
-        //ul#slideImage.worksHistoryを生成して.historyContainerの後ろに追加する
-        $('<ul>',{class:'worksHistory', id:'sliderImage'}).appendTo('.historyContainer');
-        //productSlide のなかの各データを
-        $.each(data[id].productSlide, function(imgIndex, imgValue){
-          //#slideImage に対して<li>タグを生成して追加し、その入れ子に<img src=imgValue>を流し込む
-          $('#sliderImage').append($('<li>').html($('<img>', {src:imgValue}))); 
-        });
-        $('#assigned').html(data[id].assigned);
-        $('#teams').html(data[id].teams);
-        $('#period').html(data[id].period);
-        $('#language').html(data[id].language);
-        $('#designTools').html(data[id].designTools);
-        $('#convTools').html(data[id].convTools);
-        $('#comment').html(data[id].comment);
+        $('#title').html(data[id].title); //案件名にtitleデータを流し込む
+        if ($('.bx-wrapper')) $('.bx-wrapper').remove(); // スライド関係のタグを根こそぎ削除
+        if ($('.bx-next')) $('.bx-next').remove(); // 三角ナビも削除
+        if ($('.bx-prev')) $('.bx-prev').remove(); // 三角ナビも削除
+          // 必要なタグを生成
+          $('<ul>', {
+            class: 'worksHistory',
+            id: 'sliderImage'
+          }).appendTo('.historyContainer');
+          $.each(data[id].productSlide, function(imgIndex, imgValue){ //images のなかの各データを
+            $('#sliderImage').append($('<li>').append($('<img>', {src:imgValue}))); 
+            //<li>をappendして、さらに<img src=imgValue>をappendする
+          })
+        $('#assigned').html(data[id].assigned); //担当業務概要にassignedデータを流し込む
+        $('#teams').html(data[id].teams); //ポジション・チームにteamsデータを流し込む 
+        $('#period').html(data[id].period); //対応期間にperiodデータを流し込む
+        $('#language').html(data[id].language); //対応言語にlanguageデータを流し込む
+        $('#designTools').html(data[id].designTools); //制作ツールにdesignToolsデータを流し込む
+        $('#convTools').html(data[id].convTools); //コミュニケーションツールにconvToolsデータを流し込む
+        $('#comment').html(data[id].comment); //コメントにcommentデータを流し込む
         //ajax通信は通常のリクエストの処理と並行して走るので、流し込みが終わってからbxsliderのオプションを指定する
         //この順番で書かないと、画像の読み込み前にページャーを指定することになるのでうまくレンダリングされない
-        $('.worksHistory').bxSlider({
+
+        $('.worksHistory').bxSlider({ 
           nextSelector:"a#next-btn",
           prevSelector:"a#prev-btn",
           nextText:'',
           prevText:''
         }) //.boxslider()の閉じカッコ
+
       }) //.done()の閉じカッコ
     .fail(function(){  //ajax通信に失敗した場合の処理
       window.alert('読み込みエラー');
