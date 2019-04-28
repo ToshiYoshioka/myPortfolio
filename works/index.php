@@ -35,13 +35,13 @@ $message = htmlspecialchars($message);
   <meta name="description" content="Webディレクター吉岡稔仁のポートフォリオサイト">
   <title>works history | TOSHIHITO YOSHIOKA</title>
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
-  <link rel="stylesheet" href="/myPortfolio/css/jquery.bxslider.css">
-  <link rel="stylesheet" href="/myPortfolio/css/normalize.css">
-  <link rel="stylesheet" href="/myPortfolio/css/style.css">
+  <link rel="stylesheet" href="../css/jquery.bxslider.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="css/works.css">
-  <link rel="icon" href="/myPortfolio/image/favicon.ico">
+  <link rel="icon" href="../image/favicon.ico">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/myPortfolio/js/jquery.bxslider.js"></script>
+  <script src="../js/jquery.bxslider.js"></script>
 </head>
 <body>
 <header class="header" id="header">
@@ -55,7 +55,7 @@ $message = htmlspecialchars($message);
       <div id="nav-content">
         <nav>
           <ul>
-            <li><a href="/myPortfolio/index.php" target="_blank">TOP PAGE</a></li>
+            <li><a href="../../index.php" target="_blank">TOP PAGE</a></li>
             <li><a class="anken" href='iij' data-contents="0">IIJmio webサイト運用</a></li>
             <li><a class="anken" href='yahoo' data-contents="1">Yahoo!ショッピングWebサイト運用</a></li>
             <li><a class="anken" href='clean' data-contents="2">クリーン用品ECサイト運用</a></li>
@@ -81,7 +81,7 @@ $message = htmlspecialchars($message);
     <h3 class="headingThree">【担当業務概要】</h3>
     <div class="worksDescription">
       <p class="worksText" id="assigned">
-      <!--ここのimgはJqueryで取得する-->
+      <!--ここのコンテンツはJqueryで取得する-->
       </p>
     </div><!--worksDescription-->
     <div class="historyLayoutParent clearFix">
@@ -89,7 +89,7 @@ $message = htmlspecialchars($message);
       <h3 class="headingThree">【ポジション・チーム】</h3>
       <div class="worksDescription">
         <p class="worksText" id="teams">
-        <!--ここのimgはJqueryで取得する-->
+        <!--ここのコンテンツはJqueryで取得する-->
         </p>
       </div><!--worksDescription-->
       </div><!--historyLayout1-->
@@ -97,7 +97,7 @@ $message = htmlspecialchars($message);
       <h3 class="headingThree">【対応期間】</h3>
       <div class="worksDescription">
         <p class="worksText" id="period">
-        <!--ここのimgはJqueryで取得する-->
+        <!--ここのコンテンツはJqueryで取得する-->
         </p>
       </div><!--worksDescription-->
       </div><!--historyLayout1-->
@@ -108,7 +108,7 @@ $message = htmlspecialchars($message);
         <p class="paragraph bold">～対応言語～</p>
         <div class="worksDescription">
         <p class="worksText" id="language">
-        <!--ここのimgはJqueryで取得する-->
+        <!--ここのコンテンツはJqueryで取得する-->
         </p>
         </div>
       </div><!--historyLayout2-->
@@ -116,7 +116,7 @@ $message = htmlspecialchars($message);
         <p class="paragraph bold">～制作ツール～</p>
         <div class="worksDescription">
           <p class="worksText" id="designTools">
-          <!--ここのimgはJqueryで取得する-->
+          <!--ここのコンテンツはJqueryで取得する-->
           </p>
         </div>
       </div><!--historyLayout2-->
@@ -124,14 +124,14 @@ $message = htmlspecialchars($message);
         <p class="paragraph bold">～コミュニケーションツール～</p>
         <div class="worksDescription">
           <p class="worksText" id="convTools">
-          <!--ここのimgはJqueryで取得する-->
+          <!--ここのコンテンツはJqueryで取得する-->
           </p>
         </div>
       </div><!--historyLayout2-->
     </div><!--historyLayoutParent-->
     <h3 class="headingThree">【コメント】</h3>
     <p class="comment" id="comment">
-    <!--ここのimgはJqueryで取得する-->
+    <!--ここのコンテンツはJqueryで取得する-->
     </p>
 </section>
 <section class="contact" id="contact">

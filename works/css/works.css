@@ -34,18 +34,17 @@
   line-height: 1.8;
 }
 /* works bx-slider */
-.bx-viewport{
-  overflow: auto;
-}
+
 .historyContainer{
-  width: 100%;
-  margin: 0 auto;
   position: relative;
+  max-width: 960px;
+  width: 90%;
+  margin: 0 auto;
 }
 #next-btn,
 #prev-btn{
   position: absolute;
-  top: 18%;
+  top: 15%;
 }
 #next-btn{
   right: 0;
@@ -53,7 +52,21 @@
 #prev-btn{
   left: 0;
 }
+/*
+.worksHistory{
+  margin: 0 auto;
+  width: 85%;
+  max-width: 980px;
+}
+*/
+.worksHistory li{
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
 .worksHistory li img{
+  max-width: 780px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -97,5 +110,8 @@
   .historyLayout2:last-child{
     float: left;
     width: 37%;
+  }
+  .worksHistory li img{
+    width: 70%;
   }
 }
