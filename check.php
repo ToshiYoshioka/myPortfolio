@@ -60,7 +60,7 @@ if(empty($error) != true){
 // 配列をセッション変数に格納
 $_SESSION['error'] = $error;
 //初めのフォームに飛ぶ
-header('Location: /myPortfolio/index.php#contact');
+header('Location: index.php#contact');
 exit;
 }
 ?>

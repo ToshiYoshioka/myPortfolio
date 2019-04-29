@@ -9,7 +9,7 @@ session_regenerate_id(true);
 
 // RETURNボタンを押したら、最初のフォームへ戻る
 if(isset($_POST['return']) == true && $_POST['return'] == 'RETURN') {
-	header('Location: /myPortfolio/index.php#contact');
+	header('Location: index.php#contact');
 	exit;
 }
 
@@ -41,9 +41,9 @@ $email = htmlspecialchars($email);
 $message = htmlspecialchars($message);
 
 date_default_timezone_set('Asia/Tokyo');
-require_once("./PHPMailer/src/PHPMailer.php");      //ライブラリー読込
-require_once("./PHPMailer/src/Exception.php");  	//ライブラリー読込
-require_once("./PHPMailer/src/SMTP.php");           //ライブラリー読込
+require_once("/PHPMailer/src/PHPMailer.php");      //ライブラリー読込
+require_once("/PHPMailer/src/Exception.php");  	//ライブラリー読込
+require_once("/PHPMailer/src/SMTP.php");           //ライブラリー読込
 mb_language("japanese");
 mb_internal_encoding("UTF-8");
  
@@ -57,7 +57,7 @@ $ssl_type      = "tls";
  
 //宛先・件名・本文
 //POSTやGETでメールを送信する場合
-//$fromname = "送信者名だよ";
+//$fromname = "吉岡稔仁";
 //$to       = urldecode(htmlspecialchars($_POST["to"],  ENT_QUOTES));
 //$subject  = urldecode(htmlspecialchars($_POST["subject"],  ENT_QUOTES));
 //$body     = urldecode(htmlspecialchars($_POST["body"],  ENT_QUOTES));
@@ -83,9 +83,9 @@ try {
 
 
  //データベースへの接続
- $dsn = 'mysql:dbname=myPortfolio;host=localhost';
- $user = 'root';
- $password = '';
+ $dsn = 'mysql:dbname=LAA1056404-8665cc07eef0;host=mysql135.phy.lolipop.lan';
+ $user = 'LAA1056404@172.19.47.241';
+ $password = 't19oS861hI14hI4t';
  $dbh = new PDO($dsn,$user,$password);
  $dbh -> query('SET NAMES utf8');
 
@@ -105,6 +105,7 @@ try {
 	$mail->IsSMTP();
 	$mail->SMTPAuth    = true;
 	//$mail->SMTPDebug   = 2;	//デバッグなどを行うときはコメントアウトを解除！
+	$mail->SMTPDebug   = 2;	//デバッグなどを行うときはコメントアウトを解除！
 	$mail->SMTPOptions = array(
         'ssl' => array(
             'verify_peer'       => false,	//SSLサーバー証明書の検証を要求するか（デフォルト：true）
@@ -164,6 +165,7 @@ session_destroy();
 </head>
 <body>
 <?php
+
 print $name;
 print 'さま<br>';
 print 'メッセージありがとうございました！<br>';
@@ -173,19 +175,14 @@ print '」<br>';
 print $email;
 print 'に自動返信メールをお送りしましたのでご確認ください';
 
-/*
-入力フォームの後のcheckとか、thanksページは普通にhtmlとcssをマークアップしたあとに
-<?php ?>を入れ子してあげる
-*/
-/*
-$mail_sub='メッセージをありがとうございました！';
-$mail_body= $name."さまへ\nメッセージありがとうございました";
-$mail_body= html_entity_decode($mail_body,ENT_QUOTES,"UTF-8");
-$mail_head= 'From: 1019021toshihito@gmail.com';
-mb_language('Japanese');
-mb_internal_encoding("UTF-8");
-mb_send_mail($email, $mail_sub, $mail_body, $mail_head);
-*/
+//$mail_sub='メッセージをありがとうございました！';
+//$mail_body= $name."さまへ\nメッセージありがとうございました";
+//$mail_body= html_entity_decode($mail_body,ENT_QUOTES,"UTF-8");
+//$mail_head= 'From: 1019021toshihito@gmail.com';
+//mb_language('Japanese');
+//mb_internal_encoding("UTF-8");
+//mb_send_mail($email, $mail_sub, $mail_body, $mail_head);
+
 ?>
 <p><a href="index.php">戻る</a></p>
 <script src="js/myScript.js"></script>
