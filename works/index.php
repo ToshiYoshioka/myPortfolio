@@ -136,7 +136,7 @@ $message = htmlspecialchars($message);
 </section>
 <section class="contact" id="contact">
   <h2 class="headingTwo">contact</h2>
-    <form class="contactForm"  method="post" action="myPortfolio/check.php">
+    <form class="contactForm"  method="post" action="../check.php">
       <input type="text" name="name" value="<?php print $name; ?>" placeholder="name">
       <input type="text" name="email" value="<?php print $email; ?>" placeholder="email">
       <textarea name="message" placeholder="message"><?php print $message; ?></textarea>

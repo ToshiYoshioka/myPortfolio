@@ -41,9 +41,9 @@ $email = htmlspecialchars($email);
 $message = htmlspecialchars($message);
 
 date_default_timezone_set('Asia/Tokyo');
-require_once("/PHPMailer/src/PHPMailer.php");      //ライブラリー読込
-require_once("/PHPMailer/src/Exception.php");  	//ライブラリー読込
-require_once("/PHPMailer/src/SMTP.php");           //ライブラリー読込
+require_once("./PHPMailer/src/PHPMailer.php");     //ライブラリー読込
+require_once("./PHPMailer/src/Exception.php");  	  //ライブラリー読込
+require_once("./PHPMailer/src/SMTP.php");          //ライブラリー読込
 mb_language("japanese");
 mb_internal_encoding("UTF-8");
  
@@ -104,7 +104,6 @@ try {
 	$mail = new PHPMailer();
 	$mail->IsSMTP();
 	$mail->SMTPAuth    = true;
-	//$mail->SMTPDebug   = 2;	//デバッグなどを行うときはコメントアウトを解除！
 	$mail->SMTPDebug   = 2;	//デバッグなどを行うときはコメントアウトを解除！
 	$mail->SMTPOptions = array(
         'ssl' => array(
