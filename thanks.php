@@ -84,7 +84,7 @@ try {
 
  //データベースへの接続
  $dsn = 'mysql:dbname=LAA1056404-8665cc07eef0;host=mysql135.phy.lolipop.lan';
- $user = 'LAA1056404@172.19.47.241';
+ $user = 'LAA1056404';
  $password = 't19oS861hI14hI4t';
  $dbh = new PDO($dsn,$user,$password);
  $dbh -> query('SET NAMES utf8');
@@ -104,7 +104,7 @@ try {
 	$mail = new PHPMailer();
 	$mail->IsSMTP();
 	$mail->SMTPAuth    = true;
-	$mail->SMTPDebug   = 2;	//デバッグなどを行うときはコメントアウトを解除！
+	//$mail->SMTPDebug   = 2;	//デバッグなどを行うときはコメントアウトを解除！
 	$mail->SMTPOptions = array(
         'ssl' => array(
             'verify_peer'       => false,	//SSLサーバー証明書の検証を要求するか（デフォルト：true）
