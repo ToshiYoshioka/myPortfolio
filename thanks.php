@@ -3,17 +3,17 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// セッション変数を使うことを宣言する
+//セッション変数を使うことを宣言する
 session_start();
 session_regenerate_id(true);
 
-// RETURNボタンを押したら、最初のフォームへ戻る
+//RETURNボタンを押したら、最初のフォームへ戻る
 if(isset($_POST['return']) == true && $_POST['return'] == 'RETURN') {
 	header('Location: index.php#contact');
 	exit;
 }
 
-// セッション変数の値を変数へ格納する
+//セッション変数の値を変数へ格納する
 if (isset($_SESSION['name']) == true) {
 	$name = $_SESSION['name'];
 }
@@ -35,11 +35,12 @@ else {
 	$message = '';
 }
 
-// サニタイズする
+//サニタイズする
 $name = htmlspecialchars($name);
 $email = htmlspecialchars($email);
 $message = htmlspecialchars($message);
 
+//タイムゾーンのセット
 date_default_timezone_set('Asia/Tokyo');
 require_once("./PHPMailer/src/PHPMailer.php");     //ライブラリー読込
 require_once("./PHPMailer/src/Exception.php");  	  //ライブラリー読込
@@ -55,14 +56,7 @@ $from          = "1019021toshihito@gmail.com";
 $port          = 587;
 $ssl_type      = "tls";
  
-//宛先・件名・本文
-//POSTやGETでメールを送信する場合
-//$fromname = "吉岡稔仁";
-//$to       = urldecode(htmlspecialchars($_POST["to"],  ENT_QUOTES));
-//$subject  = urldecode(htmlspecialchars($_POST["subject"],  ENT_QUOTES));
-//$body     = urldecode(htmlspecialchars($_POST["body"],  ENT_QUOTES));
- 
-//固定テキストでテスト用
+//メールに記載する文面
 $fromname = "吉岡稔仁";
 $to       = $email;
 $subject  = "お問い合わせありがとうございます";
@@ -78,10 +72,9 @@ $body     = <<<EOD
                 
 吉岡稔仁
 EOD;
- 
+
+
 try {
-
-
  //データベースへの接続
  $dsn = 'mysql:dbname=LAA1056404-8665cc07eef0;host=mysql135.phy.lolipop.lan';
  $user = 'LAA1056404';
@@ -96,9 +89,6 @@ try {
  
  //データベースcontactへレコードを追加したら、忘れずにデータベースとの接続を切る
  $dbh = null;
- 
- 
- 
  
 	//メール送信
 	$mail = new PHPMailer();
@@ -131,10 +121,8 @@ try {
         echo "Mailer Error: " . $mail->ErrorInfo;
 		exit;
 	}
- 
 }
 catch(Exception $e) {
-
 	echo "例外が生じました。";
     echo "Exception Message：" . $e->getMessage();
 	exit;
@@ -142,10 +130,9 @@ catch(Exception $e) {
 
 // セッションの値を初期化
 $_SESSION = array();
- 
+
 // セッションを破棄
 session_destroy();
-
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -164,7 +151,7 @@ session_destroy();
 </head>
 <body>
 <?php
-
+//thanks.phpでは以下を表示する
 print $name;
 print 'さま<br>';
 print 'メッセージありがとうございました！<br>';
@@ -173,15 +160,6 @@ print nl2br($message);
 print '」<br>';
 print $email;
 print 'に自動返信メールをお送りしましたのでご確認ください';
-
-//$mail_sub='メッセージをありがとうございました！';
-//$mail_body= $name."さまへ\nメッセージありがとうございました";
-//$mail_body= html_entity_decode($mail_body,ENT_QUOTES,"UTF-8");
-//$mail_head= 'From: 1019021toshihito@gmail.com';
-//mb_language('Japanese');
-//mb_internal_encoding("UTF-8");
-//mb_send_mail($email, $mail_sub, $mail_body, $mail_head);
-
 ?>
 <p><a href="index.php">戻る</a></p>
 <script src="js/myScript.js"></script>
