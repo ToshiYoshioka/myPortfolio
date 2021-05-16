@@ -61,7 +61,7 @@ $message = htmlspecialchars($message);
     </div><!--nav-drawer-->
     <p class="subTitle">portfolio of my works</p>
   <h1 class="headingOne">TOSHIHITO YOSHIOKA</h1>
-    <a class="button" href="#contact">contact</a> 
+    <a class="button" href="#contact">contact</a>
 </header>
 <section class="aboutMe" id="aboutMe">
   <h2 class="headingTwo">about me</h2>
