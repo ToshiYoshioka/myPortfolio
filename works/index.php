@@ -1,31 +1,31 @@
 <?php
-//セッション変数を使います宣言
-session_start();
-session_regenerate_id(true);
+// //セッション変数を使います宣言
+// session_start();
+// session_regenerate_id(true);
 
-//もしセッション変数に定義がある場合は、入力された値を使用する
-if(isset($_SESSION['name'])== true){
-  $name = $_SESSION['name'];
-}else{
-  $name = '';
-}
+// //もしセッション変数に定義がある場合は、入力された値を使用する
+// if(isset($_SESSION['name'])== true){
+//   $name = $_SESSION['name'];
+// }else{
+//   $name = '';
+// }
 
-if(isset($_SESSION['email'])== true){
-  $email = $_SESSION['email'];
-}else{
-  $email = '';
-}
+// if(isset($_SESSION['email'])== true){
+//   $email = $_SESSION['email'];
+// }else{
+//   $email = '';
+// }
 
-if(isset($_SESSION['message'])== true){
-  $message = $_SESSION['message'];
-}else{
-  $message = '';
-}
+// if(isset($_SESSION['message'])== true){
+//   $message = $_SESSION['message'];
+// }else{
+//   $message = '';
+// }
 
-//サニタイズする
-$name = htmlspecialchars($name);
-$email = htmlspecialchars($email);
-$message = htmlspecialchars($message);
+// //サニタイズする
+// $name = htmlspecialchars($name);
+// $email = htmlspecialchars($email);
+// $message = htmlspecialchars($message);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -51,10 +51,26 @@ $message = htmlspecialchars($message);
   })(window,document,'script','dataLayer','GTM-P95LHN6');
   </script>
   <!-- End Google Tag Manager -->
+  <style>
+  button-closed{
+    display: block;
+    position: relative;
+    width: 250px;
+    padding: 10px;
+    margin: 60px auto 30px;
+    background: #999999;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 0 #3e3d3c;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+    font-size: 1.8rem;
+    letter-spacing: 0.5rem;
+  }
+  </style>
 </head>
 <body>
 <header class="header" id="header">
-  <div class="menuIcon">
+  <!-- <div class="menuIcon">
     <div id="nav-drawer">
       <input id="nav-input" type="checkbox" class="nav-unshown">
       <label id="nav-open" for="nav-input">
@@ -73,96 +89,13 @@ $message = htmlspecialchars($message);
             <li><a href="#contact">contact</a></li>
           </ul>
         </nav>
-      </div><!--nav-content-->
-    </div><!--nav-drawer-->
-  </div><!--menuIcon-->
+      </div><!--nav-content>
+    </div><!--nav-drawer>
+  </div><!--menuIcon> -->
   <h1 class="headingOne">works history</h1>
+  <p class="subTitle">portfolio of my works</p>
+  <p class="button_closed">Currently<br>under<br>renovation</a>
 </header>
-<section class="worksDetail">
-  <h2 class="headingTwo" id="title">案件名</h2>
-    <div class="historyContainer">
-      <!--ここのDOMはscriptで生成する-->
-    </div><!--historyContainer-->
-    <div><!--customControl-->
-      <a id="next-btn" class="rightMark"></a>
-      <a id="prev-btn" class="leftMark"></a>
-    </div><!--customControl-->
-    <h3 class="headingThree">【担当業務概要】</h3>
-    <div class="worksDescription">
-      <p class="worksText" id="assigned">
-      <!--ここのコンテンツはJqueryで取得する-->
-      </p>
-    </div><!--worksDescription-->
-    <div class="historyLayoutParent clearFix">
-      <div class="historyLayout1">
-      <h3 class="headingThree">【ポジション・チーム】</h3>
-      <div class="worksDescription">
-        <p class="worksText" id="teams">
-        <!--ここのコンテンツはJqueryで取得する-->
-        </p>
-      </div><!--worksDescription-->
-      </div><!--historyLayout1-->
-      <div class="historyLayout1">
-      <h3 class="headingThree">【対応期間】</h3>
-      <div class="worksDescription">
-        <p class="worksText" id="period">
-        <!--ここのコンテンツはJqueryで取得する-->
-        </p>
-      </div><!--worksDescription-->
-      </div><!--historyLayout1-->
-    </div><!--historyLayoutParent-->
-      <h3 class="headingThree">【言語・ツール】</h3>
-    <div class="historyLayoutParent clearFix">
-      <div class="historyLayout2">
-        <p class="paragraph bold">～対応言語～</p>
-        <div class="worksDescription">
-        <p class="worksText" id="language">
-        <!--ここのコンテンツはJqueryで取得する-->
-        </p>
-        </div>
-      </div><!--historyLayout2-->
-      <div class="historyLayout2">
-        <p class="paragraph bold">～制作ツール～</p>
-        <div class="worksDescription">
-          <p class="worksText" id="designTools">
-          <!--ここのコンテンツはJqueryで取得する-->
-          </p>
-        </div>
-      </div><!--historyLayout2-->
-      <div class="historyLayout2">
-        <p class="paragraph bold">～コミュニケーションツール～</p>
-        <div class="worksDescription">
-          <p class="worksText" id="convTools">
-          <!--ここのコンテンツはJqueryで取得する-->
-          </p>
-        </div>
-      </div><!--historyLayout2-->
-    </div><!--historyLayoutParent-->
-    <h3 class="headingThree">【コメント】</h3>
-    <p class="comment" id="comment">
-    <!--ここのコンテンツはJqueryで取得する-->
-    </p>
-</section>
-<section class="contact" id="contact">
-  <h2 class="headingTwo">contact</h2>
-    <form class="contactForm"  method="post" action="../check.php">
-      <input type="text" name="name" value="<?php print $name; ?>" placeholder="name">
-      <input type="text" name="email" value="<?php print $email; ?>" placeholder="email">
-      <textarea name="message" placeholder="message"><?php print $message; ?></textarea>
-      <?php
-      // エラーがあった場合は、エラー表示をする
-      if (isset($_SESSION['error']) == true) {
-       $error = $_SESSION['error'];
-      print '<p style="color: red;">';
-      foreach($error as $err) {
-      print $err.'<br />';
-      }
-      print '</p>';
-      }
-      ?>
-      <input type="submit" value="SEND" class="button">
-    </form>
-</section>
 <footer class="footer">
   &#169; Toshihito Yoshioka
 </footer>
