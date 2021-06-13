@@ -52,7 +52,7 @@
   </script>
   <!-- End Google Tag Manager -->
   <style>
-  button-closed{
+  .button_closed{
     display: block;
     position: relative;
     width: 250px;
